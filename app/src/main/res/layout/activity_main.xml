@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.example.soraiabasso.entertizer.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contextClickable="false"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnMoviesId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButtonMovies"
+            android:text="@string/btnMovies" />
+
+        <Button
+            android:id="@+id/btnSeriesId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnSeries" />
+
+        <Button
+            android:id="@+id/btnGamesId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnGames" />
+
+        <Button
+            android:id="@+id/btnBooksId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnBooks" />
+
+        <Button
+            android:id="@+id/btnRestaurantsId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnRestaurants" />
+
+        <Button
+            android:id="@+id/btnTravelsId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnTravels" />
+    </LinearLayout>
+</RelativeLayout>

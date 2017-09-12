@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Entertizer</string>
+    <string name="btnMovies">Filmes</string>
+    <string name="btnSeries">Series</string>
+    <string name="btnGames">Jogos</string>
+    <string name="btnBooks">Livros</string>
+    <string name="btnRestaurants">Restaurantes</string>
+    <string name="btnTravels">Passeios</string>
+    <string name="addMovieBtn">Adicionar Filme</string>
+    <string name="textViewTitle">Nome</string>
+    <string name="textViewType">Genero</string>
+    <string name="editTextName" />
+    <string name="editTextNameHint">Nome do filme</string>
+</resources>
