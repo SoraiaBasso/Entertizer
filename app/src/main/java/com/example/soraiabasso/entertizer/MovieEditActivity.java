@@ -12,6 +12,8 @@ import com.example.soraiabasso.entertizer.model.movies.MovieType;
 
 public class MovieEditActivity extends AppCompatActivity {
 
+    public static final String MOVIE_PARAM = "Posicao do filme a editar";
+    public static final String MOVIE_ORDER = "ordem do filme a editar";
     private EditText editTextName;
 
     @Override

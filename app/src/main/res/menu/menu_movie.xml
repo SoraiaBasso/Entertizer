@@ -4,5 +4,7 @@
 
     <item
         android:id="@+id/btnAddMovie"
-        android:title="@string/btnAddMovie" />
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/btnAddMovie"
+        app:showAsAction="always" />
 </menu>

@@ -14,4 +14,6 @@
     <string name="buttonAccept">Aceitar</string>
     <string name="buttonCancel">Cancelar</string>
     <string name="btnAddMovie">Adicionar filme</string>
+    <string name="textViewMovieName" />
+    <string name="textViewMvType" />
 </resources>

@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //metodo para mudar da MainActivity para a MoviesA  ctivity quando o botao for clicado
+    //metodo para mudar da MainActivity para a MoviesActivity quando o botao for clicado
     public void onClickButtonMovies(View view) {
         startActivity(new Intent(MainActivity.this, MoviesActivity.class));
     }

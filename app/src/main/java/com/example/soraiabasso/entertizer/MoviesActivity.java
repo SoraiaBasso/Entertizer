@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -15,12 +16,17 @@ import android.widget.Toast;
 import com.example.soraiabasso.entertizer.model.movies.Movie;
 import com.example.soraiabasso.entertizer.model.movies.MovieType;
 import com.example.soraiabasso.entertizer.model.Manager;
+import com.example.soraiabasso.entertizer.model.movies.MoviesAdapter;
 
 import java.util.LinkedList;
+import java.util.List;
+
+import static android.R.attr.order;
 
 public class MoviesActivity extends AppCompatActivity {
 
     private static final int ADD_MOVIE = 1;
+    private static final int EDIT_MOVIE = 2;
     private ListView listViewMovies;
 
 
@@ -29,14 +35,12 @@ public class MoviesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movies);
 
-
-        listViewMovies = (ListView)findViewById(R.id.listViewMovies);
+        
+        initialize();
         updateListViewMovies();
     }
 
     //fazer ligaçao entre o menu com botao para adicionar filme e a actividade movies
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -64,8 +68,6 @@ public class MoviesActivity extends AppCompatActivity {
     }
 
     //metodo para onde volta apos ser adicionado o filme
-
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -82,12 +84,33 @@ public class MoviesActivity extends AppCompatActivity {
         for(Movie m : Manager.INSTANCE.getMovies()){
             movies.add(m);
         }
-        //adaptador usando ArrayAdaptar
-        //TODO
-        //criar um adaptador especifico
+        /*
        ArrayAdapter<Movie> adapter = new ArrayAdapter<>(
-                this, android.R.layout.simple_list_item_1, movies);
+                this, android.R.layout.simple_list_item_1, movies);*/
+
+        MoviesAdapter adapter = new MoviesAdapter(this, movies);
         listViewMovies.setAdapter(adapter);
+    }
+
+    public void initialize(){
+
+        listViewMovies = (ListView)findViewById(R.id.listViewMovies);
+
+        listViewMovies.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Movie movie = (Movie) parent.getItemAtPosition(position);
+                Intent intent = new Intent(MoviesActivity.this, MovieEditActivity.class);
+
+                intent.putExtra(MovieEditActivity.MOVIE_PARAM, position);
+                intent.putExtra(MovieEditActivity.MOVIE_ORDER, order);
+
+                startActivityForResult(intent, EDIT_MOVIE);
+            }
+        });
+
     }
 
 
