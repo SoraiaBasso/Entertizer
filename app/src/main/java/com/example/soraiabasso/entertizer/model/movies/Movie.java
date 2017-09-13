@@ -1,4 +1,4 @@
-package com.example.soraiabasso.entertizer.model;
+package com.example.soraiabasso.entertizer.model.movies;
 
 /**
  * Created by soraiabasso on 12-09-2017.

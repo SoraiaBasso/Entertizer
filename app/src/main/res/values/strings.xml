@@ -11,4 +11,7 @@
     <string name="textViewType">Genero</string>
     <string name="editTextName" />
     <string name="editTextNameHint">Nome do filme</string>
+    <string name="buttonAccept">Aceitar</string>
+    <string name="buttonCancel">Cancelar</string>
+    <string name="btnAddMovie">Adicionar filme</string>
 </resources>

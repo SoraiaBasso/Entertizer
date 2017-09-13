@@ -31,33 +31,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:weightSum="1">
-
-            <EditText
-                android:id="@+id/editTextName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/editTextNameHint"
-                android:inputType="textPersonName" />
-
-            <Spinner
-                android:id="@+id/spinnerMovieType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/addMovie"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onClickButtonMovieAdd"
-                android:text="@string/addMovieBtn" />
-        </LinearLayout>
-
     </LinearLayout>
 
 </RelativeLayout>
